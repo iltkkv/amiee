@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扭蛋任務</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/gacha_style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+    	<!--用戶暱稱ID-->
+    	<ul class="user">
+    		<li>暱稱：小明</li>
+    		<li>ID：123456789</li>
+    	</ul>
+
+    	<!--貼紙數量-->
+    	<div class="sticker-outer">
+    		<div class="bear"></div>
+    		<div class="sticker">
+    			<span>目前剩餘的貼紙：10000張</span><br>
+    			<span class="date">貼紙到期時間：2019年11月11日</span>
+    		</div>
+    		<a class="btn_go_list" href="list.html" target="pop-iframe">
+    			<i class="fas fa-gift"></i>
+    			<span>已獲得的獎勵</span>
+    		</a>
+    	</div>
+
+    	<!-- Gacha-machine -->
+    	<div class="Gacha">
+            <div class ="Gacha-box">
+                <div class="egg">
+                   <div class="e_01"></div>
+                   <div class="e_02"></div>
+                   <div class="e_03"></div>
+                   <div class="e_04"></div>
+                   <div class="e_05"></div>
+                   <div class="e_06"></div>
+                   <div class="e_07"></div>
+                   <div class="e_08"></div>
+                </div>
+                <!--機台-->
+                <img class="img-machine" src="img/machine.png">
+                <!--轉蛋轉軸-->
+                <div class="turn-box">
+                    <img class="turn" src="img/btn_turn.png">
+                    <div id="btn-turn"></div>
+                </div>
+                <div class="coin">
+                    <img class="img-coin" src="img/coin.png">
+                </div>
+    		  <div class="egg-out">
+                <img class="img-egg-out" src="img/e_07.png">
+    		  </div>
+            </div>
+            <i class="fas fa-caret-down"></i>
+    	</div>
+       <!--award msg-->
+       <div class="msg">
+			<div class="msg-outer">
+				<div class="msg-over-mask"></div>
+
+                <!--中獎資訊框-->
+				<div class="msg-box">
+					<div class="btn-close-m"><i>X</i></div>
+					
+					<!--貼紙不夠 顯示的訊息-->
+					<div class="msg_01">
+						<img src="img/msg_img_01.png">
+                        <p>貼紙不夠<br>無法兌換!</p>
+						<a class="btn_enter" href="javascript:void(0);">知道了！</a>
+					</div>
+					
+					
+					<!--中獎資訊
+					<div class="msg_02">
+						<img src="img/msg_img_02.png">
+						<p>
+							恭喜你獲得獎品XXXXXX<br>
+							<span>兌換序號：<b id="copythis">WIOUERIOWR</b></span>
+						</p>
+						<a class="btn_copy" href="javascript:void(0);" onclick="CopyTextToClipboard('copythis')">
+							複製序號
+						</a>
+					</div>
+                -->
+				</div>
+			</div>
+        </div>
+
+       <!--popup for list-->
+        <div class="popup-box">
+            <div class="overlay-box-loadPage">
+                <div class="over-mask"></div>
+                <div class="load-outer for-ios">
+                    <div class="btn-close"></div>
+                	<iframe id="loadIframe" src="" frameborder="0" name="pop-iframe"></iframe>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--copy script-->
+    <script>
+    	function CopyTextToClipboard(id) {
+		    var TextRange = document.createRange();
+		    TextRange.selectNode(document.getElementById(id));
+		    sel = window.getSelection();
+		        sel.removeAllRanges();
+		        sel.addRange(TextRange);
+		    document.execCommand("copy");
+ 	 	}
+    </script>
+
+</body>
+</html>

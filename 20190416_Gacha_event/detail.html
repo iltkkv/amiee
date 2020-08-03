@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>已獲得的獎勵</title>
+   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/inner_style.css">
+
+</head>
+<body>
+    <div class="inner-wrapper detail">
+    	<div class="title">
+    		<h2>已獲得的獎勵</h2>
+    		 <div class="btn_close">
+    		 	<i>X</i>
+    		 </div>
+    		<a href="list.html">＜</a>
+    	</div>
+    	<table border="0" >
+    		<tr>
+    			<th>獎勵名稱</th>
+    			<th>獲得時間</th>
+    		</tr>
+    		<tr>
+    			<td>鑽石100顆</td>
+    			<td>2019/3/15 15:20</td>
+    		</tr>
+    	</table>
+
+    	<div class="award_num">
+    		<h4>獎勵序號</h4>
+    		<div id="copythis" class="num">WIOUERIOWR</div>
+    		<a class="copy" href="javascript:void(0);" onclick="CopyTextToClipboard('copythis')">複製序號</a>
+    		<span class="deadline">兌換期限：2020/4/20 &nbsp 23:59</span>
+    	</div>
+
+    	<div class="notice">
+    		<h3>注意事項</h3>
+    		<ul>
+    			<li>單一艾肯帳號僅可領取一次活動獎勵。</li>
+				<li>遊戲虛寶使用期限至2019/12/31為止。</li>
+				<li>虛寶序號不可重複使用，單一遊戲帳號僅可兌換一次。</li>
+				<li>參加活動需要完成艾肯平台個人資料填寫與信箱、手機&實名認證。</li>
+				<li>活動期間內，艾肯擁有隨時變更、修正活動內容之權利，所有活動獎勵內容，皆依活動公告說明為準。</li>
+				<li>角色等級達到條件，亦可以在『女神大募集』頁面，選擇伺服器後，領取達等獎勵唷。</li>
+				<li>遊戲類別一旦選定，將無法更改，單一帳號僅限領取一次，請謹慎選擇。</li>
+    		</ul>
+    	</div>
+    </div>
+    <!--script-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+    	function CopyTextToClipboard(id) {
+		    var TextRange = document.createRange();
+		    TextRange.selectNode(document.getElementById(id));
+		    sel = window.getSelection();
+		        sel.removeAllRanges();
+		        sel.addRange(TextRange);
+		    document.execCommand("copy");
+ 	 	}
+        $('.copy').click(function(){
+            alert('已經複製序號');
+        })
+    </script>
+
+</body>
+</html>

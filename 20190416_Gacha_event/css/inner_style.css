@@ -1,0 +1,220 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+*{font-family: 'Noto Sans TC',Gotham, "Helvetica Neue", Microsoft JhengHei , Helvetica, Arial, "sans-serif";}
+html::-webkit-scrollbar-track {
+	background:#efefef;
+}
+html::-webkit-scrollbar {
+  	width:3px;
+  	height:3px;
+	background:#efefef;
+}
+html::-webkit-scrollbar-thumb {
+  	background:#cccccc;
+	border-radius:5px;
+	border:1px solid #BFBFBF;
+}
+
+/*layout*/
+html,body{
+	width:100%;
+	height:auto;
+	margin:0;
+	padding:0;
+	text-align: center;
+}
+.inner-wrapper{
+	width:100%;
+}
+.inner-wrapper > div.title{
+	width:100%;
+	height:15vw;
+	line-height:15vw;
+	display:inline-block;
+	background-color:#F05E1C;
+	border-radius:4vw 4vw 0 0;
+}
+.inner-wrapper > div.title > h2{
+	height:100%;
+	margin: 0;
+	color:#fff;
+	font-size:4.8vw;
+	font-weight:800;
+}
+.inner-wrapper > table{
+	display:inline-table;
+	width:100%;
+	border-collapse: collapse;
+}
+.inner-wrapper > table tr th{
+	font-size:3.6vw;
+	font-weight:500;
+	background-color:#f4ccbb;
+	height:9vw;
+}
+.inner-wrapper > table tr th:nth-child(2){
+	background-color:#f4d7cb;
+}
+.inner-wrapper > table tr td{
+	font-size:3.2vw;
+	height:8.8vw;
+	padding:2vw 0;
+}
+.inner-wrapper > table tr:nth-child(odd){
+	background-color:#efefef;
+}
+.inner-wrapper > table tr td:nth-child(1){
+	width:50%;
+}
+.inner-wrapper > table tr td:nth-child(2){
+	width:32%;
+}
+.inner-wrapper.detail > table tr td:nth-child(1),.inner-wrapper.detail > table tr td:nth-child(2){
+	width:50%;
+	background-color:#efefef;
+}
+.inner-wrapper > table tr td:nth-child(3){
+	width:18%;
+}
+.inner-wrapper > table tr td a{
+	color: #F05E1C;
+	border-bottom:0.3vw solid #F05E1C;
+	font-weight:600;
+}
+.inner-wrapper > table tr td a:hover{
+	font-weight:600;
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8vw 3vw;
+    text-decoration: none;
+    font-size:4vw;
+}
+
+ul.pagination li a.active,ul.pagination li a:hover:not(.active) {
+	color:#F05E1C;
+}
+
+/*detail padge style*/
+.award_num{
+	display:inline-block;
+	margin-top:6.5vw;
+	background-color:#efefef;
+	width:85%;
+	border-radius:1.5vw;
+	box-sizing:border-box;
+	padding:4vw 5%;
+}
+.award_num h4{
+	width:100%;
+	margin:0;
+	color: #F05E1C;
+	font-size:4.2vw;
+	font-weight:800;
+}
+.num{
+	display:block;
+	width:100%;
+	height:9vw;
+	line-height:9vw;
+	font-size: 4vw;
+}
+.award_num > a{
+	display:inline-block;
+	background-color: #F05E1C;
+	color: #fff;
+	font-weight:400;
+	font-size:3.6vw;
+	cursor:pointer;
+	width:50%;
+	height:10vw;
+	line-height:10vw;
+	border-radius:100em;
+	margin-top:3vw;
+	margin-bottom:4vw;
+	overflow: visible;
+}
+.award_num a:hover{
+	filter:brightness(1.1) drop-shadow(0px 2px 0px rgba(0,0,0,0.2));
+	transform:translateY(-5%);
+}
+.deadline{
+	display:block;
+	width:14em;
+	margin:0 auto;
+	font-size:2.4vw;
+	color: #F05E1C;
+	font-weight:500;
+	padding-bottom:1vw;
+	border-bottom: 0.15vw solid #F05E1C;
+}
+.notice{
+	width:85%;
+	box-sizing:border-box;
+	margin:5vw auto 10vw;
+}
+.notice h3{
+	font-size:3.6vw;
+	font-weight:600;
+	margin:0 0 3vw 0;
+	padding-bottom:2vw;
+	border-bottom:0.1vw solid #b7b7b7;
+	text-align:left;
+}
+.notice ul{
+	width:calc(100% - 1em);
+	padding:0 0 0 1em;
+	margin:0;
+	text-align:left;
+}
+.notice ul li{
+	width:100%;
+	list-style: decimal;
+	font-size:3vw;
+	margin-bottom:1vw;
+	line-height:1.4;
+	color:#333333;
+}
+.btn_close{
+	color:#F05E1C;
+	width:6vw;
+	height:6vw;
+	line-height:6vw;
+	border-radius:100%;
+	font-size:4vw;
+	position:absolute;
+	display:inline-block;
+	right:4vw;
+	top:4vw;
+	cursor:pointer;
+	background-color:#fff;
+	z-index:888;
+	font-weight:100;
+}
+.btn_close i{
+	display:inline-block;
+	transform: scaleY(0.8);
+	font-style: normal;
+}
+.title a{
+	width:12vw;
+	height:12vw;
+	font-size:6vw;
+	display:inline-block;
+	color:#fff;
+	z-index:999;
+	position:absolute;
+	left:0vw;
+	top:0;
+	font-weight:100;
+	transform:scaleX(0.5);
+}
